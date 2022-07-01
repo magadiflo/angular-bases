@@ -7,12 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  titulo: string = 'Contador App';
-  numero: number = 0;
-  base: number = 5;
-
-  acumular(valor: number): void {
-    this.numero += valor;
-  }
-
 }
