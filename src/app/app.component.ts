@@ -10,5 +10,8 @@ export class AppComponent {
   titulo: string = 'Contador App';
   numero: number = 0;
 
-  
+  acumular(valor: number): void {
+    this.numero += valor;
+  }
+
 }
