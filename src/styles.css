@@ -45,3 +45,17 @@ button:focus {
     padding: 10px;
     border: 1px solid gray;
 }
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex-grow: 1; /**Que se expanda lo más que pueda*/
+    margin-right: 10px;
+}
+
+.input {
+    display: block;
+    margin: 5px;
+}
