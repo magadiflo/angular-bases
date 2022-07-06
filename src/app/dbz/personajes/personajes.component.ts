@@ -1,9 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
   selector: 'app-personajes',
@@ -13,10 +10,8 @@ interface Personaje {
 })
 export class PersonajesComponent {
 
-  personajes: Personaje[] = [
-    { nombre: 'Bulma', poder: 300 },
-    { nombre: 'Maestro Roshi', poder: 800 },
-  ];
+  @Input()
+  personajes: Personaje[] = [];
 
 
 }
