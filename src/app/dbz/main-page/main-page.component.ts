@@ -8,11 +8,13 @@ import { Personaje } from '../interfaces/dbz.interface';
 })
 export class MainPageComponent {
 
-  nuevo: Personaje = { nombre: 'Maestro Roshi', poder: 1000 };
-
   personajes: Personaje[] = [
     { nombre: 'Bulma', poder: 300 },
     { nombre: 'Maestro Roshi', poder: 800 },
   ];
+
+  agregarNuevoPersonaje(personaje: Personaje): void {
+    this.personajes.push(personaje);
+  }
 
 }
