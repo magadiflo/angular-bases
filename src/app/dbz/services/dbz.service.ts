@@ -11,6 +11,14 @@ import { Personaje } from '../interfaces/dbz.interface';
  * * servicio sea llamado varias veces de diversos lugares
  */
 
+/**
+ * * Usualmente el orden sería:
+ * * 1) Atributos públicos, privados
+ * * 2) Métodos getters
+ * * 3) Constructor
+ * * 4) Métodos normales públicos, privados
+ */
+
 @Injectable()
 export class DbzService {
 
@@ -18,10 +26,6 @@ export class DbzService {
         { nombre: 'Bulma', poder: 300 },
         { nombre: 'Maestro Roshi', poder: 800 },
     ];
-
-    constructor() {
-        console.log('Servicio inicializado');
-    }
 
     get personajes(): Personaje[] {
         //* Spread operator ..., separa cada elemento del array (_personajes) 
@@ -36,7 +40,9 @@ export class DbzService {
         return [...this._personajes];
     }
 
-    agregarNuevoPersonaje(personaje: Personaje): void {
+    constructor() { }
+
+    agregarPersonaje(personaje: Personaje): void {
         this._personajes.push(personaje);
     }
 
